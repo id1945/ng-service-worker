@@ -26,7 +26,7 @@ const router = [{
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(router),
+    RouterModule.forRoot(router, { useHash: true }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

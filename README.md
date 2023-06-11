@@ -140,7 +140,6 @@ Sau khi build xong sẽ tự động tạo file `ngsw-worker.js`
 
 Kiểm tra bằng cách mở console trong trình duyệt và kiểm tra xem có thông báo "Service worker registered" hay không.
 
-
 Để tạo một component trong project này ứng dụng service worker để lưu cache data, bạn có thể làm theo các bước sau:
 
 Trong file `about-component.component.ts`, thêm mã sau để lấy dữ liệu từ API và lưu vào cache:
@@ -197,3 +196,5 @@ Trong file `my-component.component.html`, hiển thị dữ liệu từ API:
 ```html
 <p>{{ data | json }}</p>
 ```
+
+Sau khi hoàn thành các bước trên và deploy, bạn có thể kiểm tra website và ngắt kết nối internet để lấy dữ liệu từ cache.
