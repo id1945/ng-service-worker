@@ -198,3 +198,8 @@ Trong file `my-component.component.html`, hiển thị dữ liệu từ API:
 ```
 
 Sau khi hoàn thành các bước trên và deploy, bạn có thể kiểm tra website và ngắt kết nối internet để lấy dữ liệu từ cache.
+
+![124124](https://github.com/id1945/ng-service-worker/assets/40824445/aed2eaea-f341-4f30-a1c2-e26670cc1d17)
+
+<img width="500" alt="sw-architecture" src="https://github.com/id1945/ng-service-worker/assets/40824445/86e812e0-ddb5-4751-9043-bdd1f0361c2c">
+
