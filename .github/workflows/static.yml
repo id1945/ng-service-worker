@@ -1,0 +1,35 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3 # Checks-out your repository under $GITHUB_WORKSPACE
+    
+    - uses: actions/setup-node@v3 # Install Node and npm on Ubuntu
+      with:
+        node-version: 18
+
+    - name: Angular CLI
+      run: npm i -g @angular/cli@16 # Install angular cli v6 global
+ 
+    - name: Install dependencies
+      run: npm i -f # Install all package with --force
+      
+    - name: Build
+      run: ng build --service-worker --base-href="/ng-service-worker/" # Build project with base href
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3 # Deploy copy files from dist/ng-service-worker to gh-pages
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: dist/ng-service-worker
+
+permissions:
+  contents: write # Allow write permission to GITHUB_TOKEN to commit to deploy branch.
