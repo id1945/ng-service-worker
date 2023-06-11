@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686493127688,
+  "timestamp": 1686493442220,
   "index": "/ng-service-worker/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/ng-service-worker/favicon.ico",
         "/ng-service-worker/index.html",
-        "/ng-service-worker/main.f7e5633de2e26862.js",
+        "/ng-service-worker/main.b65d3d4884fb0bb7.js",
         "/ng-service-worker/polyfills.cc6bdfb86186a85f.js",
         "/ng-service-worker/runtime.c17d9a9d99b3f423.js",
         "/ng-service-worker/styles.ef46db3751d8e999.css"
@@ -24,8 +24,8 @@
   "dataGroups": [],
   "hashTable": {
     "/ng-service-worker/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/ng-service-worker/index.html": "272c58959fc4226680d98a5aab275f0d6c13ebc3",
-    "/ng-service-worker/main.f7e5633de2e26862.js": "dc0d915f1dc0c1d281daf352da0e0f4c28f46f36",
+    "/ng-service-worker/index.html": "539be5c969a2fc571f6224994a704d4633a3aec6",
+    "/ng-service-worker/main.b65d3d4884fb0bb7.js": "945f762aecc5105dfe25bb6f1dbfa969c1591796",
     "/ng-service-worker/polyfills.cc6bdfb86186a85f.js": "a1c87c47ca4488eb93bcb7feb77763b7dd3a540f",
     "/ng-service-worker/runtime.c17d9a9d99b3f423.js": "5d1f838979524c3322f74e807d006761c6136a73",
     "/ng-service-worker/styles.ef46db3751d8e999.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
