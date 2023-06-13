@@ -14,6 +14,19 @@ export class AboutComponent implements OnInit {
     constructor(private http: HttpClient) { }
 
     ngOnInit() {
+        const fetch = () => {
+          // Lấy dữ liệu từ API
+          this.http.get(this.urlGet).subscribe(data => {
+              console.log('Data loaded from API:', data);
+              this.data = data;
+              // Lưu vào cache
+              if ('caches' in window) {
+                  caches.open('my-cache').then(cache => {
+                      cache.put(this.urlGet, new Response(JSON.stringify(data)));
+                  });
+              }
+          });
+        }
         // Nếu mất internet, bạn có thể lấy dữ liệu từ cache bằng cách sử dụng phương thức caches.match()
         if ('caches' in window) {
             if (navigator.onLine) {
@@ -25,21 +38,13 @@ export class AboutComponent implements OnInit {
                             console.log('Data loaded from cache:', data);
                             this.data = data;
                         });
+                    } else {
+                      fetch();
                     }
                 });
             } else {
                 console.log('You are not connected to the internet');
-                // Lấy dữ liệu từ API
-                this.http.get(this.urlGet).subscribe(data => {
-                    console.log('Data loaded from API:', data);
-                    this.data = data;
-                    // Lưu vào cache
-                    if ('caches' in window) {
-                        caches.open('my-cache').then(cache => {
-                            cache.put(this.urlGet, new Response(JSON.stringify(data)));
-                        });
-                    }
-                });
+                fetch();
             }
 
         }
