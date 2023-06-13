@@ -22,11 +22,9 @@ export class AboutComponent implements OnInit {
                     console.log('Data loaded from API:', data);
                     this.data = data;
                     // Lưu vào cache
-                    if ('caches' in window) {
-                        caches.open('my-cache').then(cache => {
-                            cache.put(this.urlGet, new Response(JSON.stringify(data)));
-                        });
-                    }
+                    caches.open('my-cache').then(cache => {
+                        cache.put(this.urlGet, new Response(JSON.stringify(data)));
+                    });
                 });
             } else {
                 console.log('You are not connected to the internet');
